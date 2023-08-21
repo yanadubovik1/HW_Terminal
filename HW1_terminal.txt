@@ -1,0 +1,53 @@
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir
+3) Зайти в папку - cd group_35(название папки)
+4) Создать 3 папки - mkdir dir5 dir6 dir7 
+5) Зайти в любую папку - cd dir5
+6) Создать 5 файлов (3 txt, 2 json) - touch name1.txt name2.txt. name3.txt pet1.json pet2.json
+7) Создать 3 папки - mkdir qa1 qa2 qa3
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - cat name1.txt
+10) + написать туда что-нибудь, любой текст - cat >>name1.txt 
+my name is Yana
+11) + сохранить и выйти - Control+C
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку - mv dir5/name1.txt dir6/name1.txt
+dir5/name2.txt dir6/name2.txt
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp dir6/name1.txt dir5/name1.txt
+dir6/name2.txt dir5/name2.txt
+15) Найти файл по имени - find pet1.json
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - tail -f name1.txt | grep Vasya
+17) вывести несколько первых строк из текстового файла - head -2 name1.txt
+18) вывести несколько последних строк из текстового файла - tail -3 name1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less name1.txt
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request
+
+curl http://162.55.220.72:5006/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name=Yana&age=29"
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+touch script.sh
+cat >>script.sh
+#!/bin/bash
+cd group_35
+mkdir dir8 dir9 dir10 
+cd dir8
+touch name1.txt name2.txt name3.txt pet1.json pet2.json
+mkdir qa1 qa2 qa3
+ls -la
+cd ..
+mv dir8/name1.txt dir9/name1.txt
+dir8/name2.txt dir9/name2.txt
+
+ chmod +x ./script.sh
+./script.sh
+
+
+
